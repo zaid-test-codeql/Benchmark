@@ -58,6 +58,9 @@ public class BenchmarkTest01490 extends HttpServlet {
 		// System.out.println("Filter " + filter);
 		boolean found = false;
 		javax.naming.NamingEnumeration<javax.naming.directory.SearchResult> results = ctx.search(base, filter,filters, sc);
+		
+		// add another one
+		javax.naming.NamingEnumeration<javax.naming.directory.SearchResult> results2 = ctx.search(base, filter,filters, sc);
 		while (results.hasMore()) {
 			javax.naming.directory.SearchResult sr = (javax.naming.directory.SearchResult) results.next();
 			javax.naming.directory.Attributes attrs = sr.getAttributes();
